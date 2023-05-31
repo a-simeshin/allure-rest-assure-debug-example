@@ -3,6 +3,7 @@ package com.testing.allure.testingallure;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
@@ -17,6 +18,11 @@ public class TestingAllureApplication {
 
 		@GetMapping("/hello")
 		String hello() {
+			return "Hello World!";
+		}
+
+		@PostMapping("/hello-post")
+		String helloPost() {
 			return "Hello World!";
 		}
 	}

@@ -23,8 +23,13 @@ class TestingAllureApplicationTests {
     }
 
 	@Test
-	void checkThatFilterDoesNotThrowAnyExceptions() {
+	void checkThatFilterDoesNotThrowAnyExceptionsOnGet() {
 		assertDoesNotThrow(() -> RestAssured.get("http://localhost:" + port + "/hello"));
+	}
+
+	@Test
+	void checkThatFilterDoesNotThrowAnyExceptionsOnPost() {
+		assertDoesNotThrow(() -> RestAssured.post("http://localhost:" + port + "/hello-post"));
 	}
 
 }
